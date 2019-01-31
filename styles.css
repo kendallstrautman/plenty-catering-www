@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Vibur|Work+Sans');
+
+html {
+  overflow: hidden;
+}
+
+body {
+  color:black;
+  font-family: 'Work Sans', Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 24px;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+h1.logo {
+  font-family: 'Vibur';
+  font-weight: 100;
+  font-size: 70px;
+  position: absolute;
+  top: 2rem;
+  left: 45vw;
+  margin: 0;
+  z-index: 1000;
+}
+
+h1.logo:hover {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+p.p-memo {
+  width: 375px;
+  line-height: 32px;
+  padding-left: 7rem;
+}
+
+p.p-insta {
+  padding-top: 20px;
+}
+
+div.footer {
+  position: absolute;
+  z-index: 1000;
+  bottom: 5rem;
+  width: 100vw;
+}
+
+div.footer-flex-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+}
+
+div.footer-contact-wrap {
+  padding: 10px ;
+  text-align: right;
+  padding-right: 7rem;
+}
+
+img {
+  position: absolute;
+  /* top: calc(50% - 25vh);
+  left: calc(50% - 150px); */
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+  margin: 0;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+img.img-1 {
+  width: 800px;
+  top: calc(48% - 270px);
+  left:calc(50% - 400px);
+}
+
+img.img-2 {
+  width: 625px;
+  top: calc(48% - 235px);
+  left:calc(50% - 313px);
+}
+
+img.img-3 {
+  width: 545px;
+  top: calc(48% - 185px);
+  left:calc(50% - 275px);
+} 
+
+img.img-4 {
+  width: 400px;
+  top: calc(48% - 270px);
+  left:calc(50% - 200px);
+}
+
+img.img-5 {
+  width: 430px;
+  top: calc(48% - 330px);
+  left:calc(50% - 215px);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
