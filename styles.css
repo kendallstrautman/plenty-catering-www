@@ -136,7 +136,7 @@ img.img-5 {
   left:calc(50% - 183px);
 }
 
-a {
+/* a {
   text-decoration: none;
   color: inherit;
 }
@@ -144,86 +144,45 @@ a {
 a:hover {
   text-decoration: underline;
   cursor: none;
+} */
+
+p > a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 0 3px 5px 3px;
+  position: relative;
+  line-height: 1;
+  cursor: none;
 }
 
-/* @media screen and (min-width: 1024px) {
-
-  body {
-    color: purple;
-  }
-
-  img.img-1 {
-    width: 700px;
-    top: calc(48% - 270px);
-    left:calc(50% - 400px);
-  }
-  
-  img.img-2 {
-    width: 625px;
-    top: calc(48% - 235px);
-    left:calc(50% - 313px);
-  }
-  
-  img.img-3 {
-    width: 545px;
-    top: calc(48% - 185px);
-    left:calc(50% - 275px);
-  } 
-  
-  img.img-4 {
-    width: 400px;
-    top: calc(48% - 270px);
-    left:calc(50% - 200px);
-  }
-  
-  img.img-5 {
-    width: 430px;
-    top: calc(48% - 330px);
-    left:calc(50% - 215px);
-  }
+p > a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 100%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
 }
 
-@media(min-width: 1200px) {
-
-  body {
-    color: red;
-  }
-
-  img.img-1 {
-    width: 650px;
-    top: calc(48% - 270px);
-    left:calc(50% - 400px);
-  }
-  
-  img.img-2 {
-    width: 475px;
-    top: calc(48% - 235px);
-    left:calc(50% - 313px);
-  }
-  
-  img.img-3 {
-    width: 395px;
-    top: calc(48% - 185px);
-    left:calc(50% - 275px);
-  } 
-  
-  img.img-4 {
-    width: 250px;
-    top: calc(48% - 270px);
-    left:calc(50% - 200px);
-  }
-  
-  img.img-5 {
-    width: 340px;
-    top: calc(48% - 330px);
-    left:calc(50% - 215px);
-  }
+p > a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
-*/
+/*-----------------MEDIAQUERIES------------------------*/
+
+
+
+/*----------------- >= 15 inch MACBOOK---------------------*/
 
 @media screen and (min-width: 1440px) and (min-height: 900px) {
   div.footer {
     top: 900px;
   }
 } 
+

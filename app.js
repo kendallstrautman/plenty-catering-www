@@ -28,8 +28,8 @@ document.addEventListener("mousemove", event => {
   y = event.pageY;
 
   if (
-    mouseX <= document.documentElement.offsetWidth &&
-    mouseY <= document.documentElement.offsetHeight
+    x <= document.documentElement.offsetWidth &&
+    y <= document.documentElement.offsetHeight
   ) {
     cursor.style.top = y + "px";
     cursor.style.left = x + "px";
