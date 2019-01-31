@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  color:black;
+  color:white;
   font-family: 'Work Sans', Helvetica, sans-serif;
   font-weight: 100;
   font-size: 24px;
@@ -14,6 +14,7 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 h1.logo {
@@ -81,33 +82,33 @@ img:hover {
 }
 
 img.img-1 {
-  width: 800px;
-  top: calc(48% - 270px);
-  left:calc(50% - 400px);
+  width: 750px;
+  top: calc(48% - 255px);
+  left:calc(50% - 375px);
 }
 
 img.img-2 {
-  width: 625px;
-  top: calc(48% - 235px);
-  left:calc(50% - 313px);
+  width: 750px;
+  top: calc(48% - 255px);
+  left:calc(50% - 375px);
 }
 
 img.img-3 {
-  width: 545px;
-  top: calc(48% - 185px);
-  left:calc(50% - 275px);
+  width: 285px;
+  top: calc(48% - 220px);
+  left:calc(50% - 142px);
 } 
 
 img.img-4 {
-  width: 400px;
-  top: calc(48% - 270px);
-  left:calc(50% - 200px);
+  width: 600px;
+  top: calc(48% - 220px);
+  left:calc(50% - 300px);
 }
 
 img.img-5 {
-  width: 430px;
-  top: calc(48% - 330px);
-  left:calc(50% - 215px);
+  width: 435px;
+  top: calc(48% - 167px);
+  left:calc(50% - 217px);
 }
 
 a {
