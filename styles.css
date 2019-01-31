@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Vibur|Work+Sans');
 
 body {
-  color:black;
+  color:white;
+  background-color: #E1BB9A;
   font-family: 'Work Sans', Helvetica, sans-serif;
   font-weight: 100;
   font-size: 24px;
@@ -35,7 +36,7 @@ div.all {
 
 #cursor-tail {
   display: none;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
   height: 7px;
   width: 7px;
@@ -136,14 +137,31 @@ img.img-5 {
   left:calc(50% - 183px);
 }
 
-a {
+p > a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  padding: 0 3px 5px 3px;
+  position: relative;
+  line-height: 1;
 }
 
-a:hover {
-  text-decoration: underline;
-  cursor: none;
+p > a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  /* left: 50%; */
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+p > a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 /* @media screen and (min-width: 1024px) {
