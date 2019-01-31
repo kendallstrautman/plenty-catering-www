@@ -4,8 +4,13 @@ document.addEventListener("mousemove", event => {
   cursor.style.display = "inline";
   x = event.pageX;
   y = event.pageY;
-  cursor.style.top = y + "px";
-  cursor.style.left = x + "px";
+  if (
+    x <= document.documentElement.offsetWidth + 3 &&
+    y <= document.documentElement.offsetHeight + 3
+  ) {
+    cursor.style.top = y + "px";
+    cursor.style.left = x + "px";
+  }
 });
 
 document.addEventListener("mouseleave", () => (cursor.style.display = "none"));
@@ -16,7 +21,7 @@ document.addEventListener(
 
 $(function() {
   $(".img").draggable({
-    containment: "document",
+    containment: "parent",
     cursor: "none"
   });
 });
