@@ -1,12 +1,18 @@
 const cursor = document.getElementById("cursor");
 const cursorTail = document.getElementById("cursor-tail");
-const speed = 0.15;
 let mouseX = 0;
 let mouseY = 0;
 let tailX = 0;
 let tailY = 0;
 
+function checkTouchDevice() {
+  return "ontouchstart" in document.documentElement;
+}
+
+/*------------------custom cursor ------------------------*/
+
 function handleAnimateTail() {
+  const speed = 0.15;
   const distX = mouseX - tailX;
   const distY = mouseY - tailY;
 
@@ -22,19 +28,23 @@ function handleAnimateTail() {
 handleAnimateTail();
 
 document.addEventListener("mousemove", event => {
-  cursor.style.display = "inline";
-  cursorTail.style.display = "inline";
-  x = event.pageX;
-  y = event.pageY;
+  if (!checkTouchDevice()) {
+    cursor.style.display = "inline";
+    cursorTail.style.display = "inline";
+    x = event.pageX;
+    y = event.pageY;
 
-  if (
-    x <= document.documentElement.offsetWidth &&
-    y <= document.documentElement.offsetHeight
-  ) {
-    cursor.style.top = y + "px";
-    cursor.style.left = x + "px";
-    mouseX = event.pageX + 4;
-    mouseY = event.pageY + 4;
+    if (
+      x <= document.documentElement.offsetWidth &&
+      y <= document.documentElement.offsetHeight
+    ) {
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      mouseX = x + 4;
+      mouseY = y + 4;
+    }
+  } else {
+    document.querySelector("body").style.cursor = "auto";
   }
 });
 
@@ -48,6 +58,7 @@ document.addEventListener("mouseenter", () => {
   cursorTail.style.display = "inline";
 });
 
+/*-----------------------Image dragging--------------- */
 $(function() {
   $(".img").draggable({
     containment: "parent",
@@ -65,13 +76,12 @@ images.forEach(image => {
   });
 });
 
-//handle cursor transition
-
 if (zIndex == 999) {
   zIndex = 10;
   images.forEach(image => (image.style.zIndex = zIndex));
 }
 
+/*-----------------------document reset --------------*/
 const logo = document.querySelector(".logo");
 
 logo.addEventListener("click", () => {
