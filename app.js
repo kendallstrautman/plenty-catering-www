@@ -9,6 +9,13 @@ function checkTouchDevice() {
   return "ontouchstart" in document.documentElement;
 }
 
+if (checkTouchDevice()) {
+  if (navigator.platform == "iPhone" || navigator.platform == "iPad")
+    document
+      .getElementById("anchor-ig")
+      .setAttribute("href", "instagram://user?username=justeatplenty");
+}
+
 /*------------------custom cursor ------------------------*/
 
 function handleAnimateTail() {
