@@ -83,10 +83,6 @@ p.p-memo {
   margin: auto;
 }
 
-br {
-  display: none;
-}
-
 p.p-insta {
   padding-top: 20px;
 }
@@ -236,6 +232,11 @@ p > a {
 /*-------------------Regular Ipad--------------------*/
 
 @media screen and (min-width: 768px){
+
+  body {
+    overflow: hidden;
+  }
+
  
   p {
     margin: 0;
@@ -246,7 +247,7 @@ p > a {
     width: 350px;
     line-height: 32px;
     padding: 0 0 0 2rem;
-    margin: 0;
+    margin: auto 0px;
   }
 
   p.p-contact {
@@ -305,14 +306,6 @@ p > a {
 /*--------------------IPAD PRO & small Desktops-------*/
 
 @media screen and (min-width: 1024px) {
-
-  body {
-    overflow: hidden;
-  }
-
-  br {
-    display: inline;
-  }
   
   h1.logo {
     top: 2.5rem;
@@ -322,19 +315,11 @@ p > a {
   }
 
   p.p-memo {
-    width: 350px;
-    line-height: 32px;
     padding: 0 0 0 7rem;
-    margin: 0;
-  }
-
-  p.p-contact {
-    padding-top: .7rem;
   }
 
   div.footer-contact-wrap {
     padding: 0 7rem 0 0 ;
-    text-align: right;
   }
  
   
