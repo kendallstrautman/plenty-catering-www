@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Vibur|Work+Sans');
 
-/* Base styles for - iphone 6/7/8-----------*/
+/* Base styles for - iphone 6/7/8----------- */
+
 body {
   color:black;
   font-family: 'Work Sans', Helvetica, sans-serif;
   font-weight: 100;
   font-size: 18px;
-  /* overflow: hidden; */
   overflow-y: auto;
   overflow-x: hidden;
   height: 100vh;
@@ -66,8 +66,8 @@ h1.logo {
   font-size: 50px;
   position: absolute;
   top: 1rem;
-  left: 38vw;
-  margin: 0;
+  left: calc(50vw - 50px);
+  margin: auto;
   z-index: 1000;
 }
 
@@ -152,166 +152,191 @@ img.img-5 {
 p > a {
   text-decoration: none;
   color: inherit;
-  display: inline-block;
-  padding: 0 3px 5px 3px;
-  position: relative;
-  line-height: 1;
-  cursor: none;
-}
-
-p > a:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 100%;
-  position: absolute;
-  background: black;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-
-p > a:hover:after {
-  width: 100%;
-  left: 0;
 }
 
 /*-----------------MEDIAQUERIES------------------------*/
 
 /*---------------Iphone 5 or SE---------------------*/
 
+@media screen and (min-width: 320px) {
+  div.footer {
+    bottom: -180px;
+  }
 
+  img.img-1 {
+    width: 300px;
+    top: calc(50% - 100px);
+    left:calc(50% - 150px);
+  }
+  
+  img.img-2 {
+    width: 220px;
+    top: calc(50% - 83px);
+    left:calc(50% - 110px);
+  }
+  
+  img.img-3 {
+    width: 195px;
+    top: calc(50% - 66px);
+    left:calc(50% - 98px);
+  } 
+  
+  /* img.img-4 {
+    width: 400px;
+    top: calc(48% - 270px);
+    left:calc(50% - 200px);
+  } */
+  
+  img.img-5 {
+    width: 170px;
+    top: calc(50% - 128px);
+    left:calc(50% - 85px);
+  }
+}
+
+/*--------------TALL IPHONES----------------------*/
+
+@media screen and (min-device-height: 812px) {
+
+  div.footer {
+    bottom: -100px;
+  }
+
+  img.img-1 {
+    width: 300px;
+    top: calc(46% - 100px);
+    left:calc(50% - 150px);
+  }
+  
+  img.img-2 {
+    width: 220px;
+    top: calc(46% - 83px);
+    left:calc(50% - 110px);
+  }
+  
+  img.img-3 {
+    width: 195px;
+    top: calc(46% - 66px);
+    left:calc(50% - 98px);
+  } 
+  
+  /* img.img-4 {
+    width: 400px;
+    top: calc(48% - 270px);
+    left:calc(50% - 200px);
+  } */
+  
+  img.img-5 {
+    width: 170px;
+    top: calc(46% - 128px);
+    left:calc(50% - 85px);
+  }
+}
 
 /*-------------------Regular Ipad--------------------*/
 
-@media screen and (mind-width: 768px){
+@media screen and (min-width: 768px){
+ 
+  p {
+    margin: 0;
+    text-align: inherit;
+  }
+  
+  p.p-memo {
+    width: 350px;
+    line-height: 32px;
+    padding: 0 0 0 2rem;
+    margin: 0;
+  }
 
+  p.p-contact {
+    padding-top: .7rem;
+  }
+  
+  div.footer {
+    position: absolute;
+    z-index: 1000;
+    bottom: 0px;
+    margin-bottom: 2.5rem;
+    width: 100vw;
+  }
+  
+  div.footer-flex-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  div.footer-contact-wrap {
+    padding: 0 2.5rem 0 0 ;
+    text-align: right;
+  }
+
+  img.img-1 {
+    width: 580px;
+    top: calc(49% - 193px);
+    left:calc(50% - 290px);
+  }
+  
+  img.img-2 {
+    width: 435px;
+    top: calc(49% - 163px);
+    left:calc(50% - 217px);
+  }
+  
+  img.img-3 {
+    width: 365px;
+    top: calc(49% - 122px);
+    left:calc(50% - 182px);
+  } 
+  
+  /* img.img-4 {
+    width: 400px;
+    top: calc(48% - 270px);
+    left:calc(50% - 200px);
+  } */
+  
+  img.img-5 {
+    width: 300px;
+    top: calc(49% - 225px);
+    left:calc(50% - 150px);
+  }
 }
 
 /*--------------------IPAD PRO & small Desktops-------*/
 
 @media screen and (min-width: 1024px) {
 
-}
- 
-/*----------------13 inch Macbook --------------------*/
-
-@media screen and (min-width: 1280px) {
   body {
-    color:black;
-    font-family: 'Work Sans', Helvetica, sans-serif;
-    font-weight: 100;
-    font-size: 20px;
-    /* overflow: hidden; */
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    cursor: none;
-  }
-  
-  p::selection,
-  a::selection,
-  h1::selection,
-  br::selection {
-    background: black;
-    color: white;
-  }
-  
-  img::selection {
-    opacity: .5;
-    background-color: white;
-  }
-  
-  div.all {
-    height: inherit;
-    width: inherit;
     overflow: hidden;
   }
-  
-  #cursor {
-    display: none;
-    background-color: pink;
-    border-radius: 50%;
-    height: 15px;
-    width: 15px;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    z-index: 1001;
+
+  br {
+    display: inline;
   }
-  
-  #cursor-tail {
-    display: none;
-    background-color: black;
-    border-radius: 50%;
-    height: 7px;
-    width: 7px;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    z-index: 1001;
-  }
-  
   
   h1.logo {
-    font-family: 'Vibur';
-    font-weight: 100;
+    top: 2.5rem;
     font-size: 65px;
     position: absolute;
-    top: 1rem;
-    left: 45vw;
-    margin: 0;
-    z-index: 1000;
+    left: calc(50vw - 66);
   }
-  
-  p {
-    margin: 0;
-  }
-  
+
   p.p-memo {
     width: 350px;
     line-height: 32px;
-    padding-left: 7rem;
-  }
-  
-  p.p-insta {
-    padding-top: 20px;
-  }
-  
-  div.footer {
-    position: absolute;
-    z-index: 1000;
-    /* top: 800px; */
-    bottom: 0px;
-    margin-bottom: 1rem;
-    width: 100vw;
-  }
-  
-  div.footer-flex-wrap {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100px;
-    justify-content: space-between;
-  }
-  
-  div.footer-contact-wrap {
-    padding: 10px ;
-    text-align: right;
-    padding-right: 7rem;
-  }
-  
-  img {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    z-index: 1;
+    padding: 0 0 0 7rem;
     margin: 0;
   }
+
+  p.p-contact {
+    padding-top: .7rem;
+  }
+
+  div.footer-contact-wrap {
+    padding: 0 7rem 0 0 ;
+    text-align: right;
+  }
+ 
   
   img.img-1 {
     width: 680px;
@@ -342,7 +367,7 @@ p > a:hover:after {
     top: calc(50% - 275px);
     left:calc(50% - 183px);
   }
-  
+
   p > a {
     text-decoration: none;
     color: inherit;
@@ -369,7 +394,21 @@ p > a:hover:after {
   p > a:hover:after {
     width: 100%;
     left: 0;
+  } 
+}
+ 
+/*----------------13 inch Macbook --------------------*/
+
+@media screen and (min-width: 1280px) {
+
+  h1.logo {
+    top: 1rem;
   }
+
+  div.footer {
+    margin-bottom: 1.5rem;
+  }
+  
 }
 
 /*----------------- >= 15 inch MACBOOK---------------------*/
@@ -378,9 +417,10 @@ p > a:hover:after {
 
   h1.logo {
     padding-top: 1.5rem;
+    left: 47vw;
   }
   div.footer {
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
   }
 } 
 
