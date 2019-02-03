@@ -154,7 +154,7 @@ p > a {
 
 /*---------------Iphone 5 or SE---------------------*/
 
-@media screen and (min-width: 320px) {
+@media screen and (device-width: 320px) {
   div.footer {
     bottom: -180px;
   }
@@ -192,7 +192,7 @@ p > a {
 
 /*--------------TALL IPHONES----------------------*/
 
-@media screen and (min-device-height: 812px) {
+@media screen and (min-device-height: 812px) and (max-device-height: 896px) {
 
   div.footer {
     bottom: -100px;
