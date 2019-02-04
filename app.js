@@ -59,6 +59,7 @@ document.addEventListener("mouseenter", () => {
 });
 
 /*-----------------------Image dragging--------------- */
+
 $(function() {
   $(".img").draggable({
     containment: "parent",
