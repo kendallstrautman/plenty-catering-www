@@ -16,6 +16,10 @@ body {
   cursor: none;
 }
 
+br {
+  display: none;
+}
+
 p::selection,
 a::selection,
 h1::selection,
@@ -231,12 +235,13 @@ p > a {
 
 /*-------------------Regular Ipad--------------------*/
 
-@media screen and (min-width: 768px){
-
+@media screen and (min-width: 768px) and (min-height: 600px){
   body {
     overflow: hidden;
   }
-
+  /* br {
+    display: inline;
+  } */
  
   p {
     margin: 0;
@@ -246,7 +251,7 @@ p > a {
   p.p-memo {
     width: 350px;
     line-height: 32px;
-    padding: 0 0 0 2rem;
+    padding: .5rem 0 0 2rem;
     margin: auto 0px;
   }
 
@@ -258,7 +263,7 @@ p > a {
     position: absolute;
     z-index: 1000;
     bottom: 0px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     width: 100vw;
   }
   
@@ -305,17 +310,24 @@ p > a {
 
 /*--------------------IPAD PRO & small Desktops-------*/
 
-@media screen and (min-width: 1024px) {
-  
+@media screen and (min-width: 1024px) and (min-height: 768px) {
+
+  br {
+    display: none;
+  }
   h1.logo {
-    top: 2.5rem;
+    top: 1rem;
     font-size: 65px;
     position: absolute;
-    left: calc(50vw - 66);
+    left: calc(50vw - 67px);
+  }
+
+  div.footer {
+    margin-bottom: 2rem;
   }
 
   p.p-memo {
-    padding: 0 0 0 7rem;
+    padding: .25rem 0 0 7rem;
   }
 
   div.footer-contact-wrap {
@@ -384,25 +396,42 @@ p > a {
  
 /*----------------13 inch Macbook --------------------*/
 
-@media screen and (min-width: 1280px) {
-
-  h1.logo {
-    top: 1rem;
+@media screen and (min-width: 1024px) and (min-height: 650px) {
+  div.footer {
+    margin-bottom: 1.5rem;
   }
+
+  p.p-memo {
+    padding: .25rem 0 0 5rem;
+  }
+
+  div.footer-contact-wrap {
+    padding: 0 5rem 0 0 ;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-height: 600px) {
 
   div.footer {
     margin-bottom: 1.5rem;
+  }
+
+  p.p-memo {
+    padding: .25rem 0 0 7rem;
+  }
+
+  div.footer-contact-wrap {
+    padding: 0 7rem 0 0 ;
   }
   
 }
 
 /*----------------- >= 15 inch MACBOOK---------------------*/
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1680px) and (min-height: 600px) {
 
   h1.logo {
     padding-top: 1.5rem;
-    left: 47vw;
   }
   div.footer {
     margin-bottom: 3rem;
